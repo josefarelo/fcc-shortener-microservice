@@ -49,7 +49,7 @@ app.post("/api/shorturl", (req, res) => {
 
 app.get("/api/shorturl/:shorturl", (req, res) => {
   const shorturl = parseInt(req.params.shorturl)
-  const foundIndex = shorturl.indexOf(shorturl)
+  const foundIndex = shortUrls.indexOf(shorturl)
 
   if(foundIndex < 0) {
     return res.json({
